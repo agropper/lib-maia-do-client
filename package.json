@@ -1,0 +1,33 @@
+{
+  "name": "lib-maia-do-client",
+  "version": "0.1.0",
+  "description": "Clean DigitalOcean GenAI API client for MAIA",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'No build step yet - TypeScript coming later'",
+    "test": "echo 'Tests coming soon'"
+  },
+  "keywords": [
+    "digitalocean",
+    "genai",
+    "knowledge-base",
+    "agent"
+  ],
+  "author": "HIEofOne.org",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.0.0"
+  },
+  "devDependencies": {},
+  "exports": {
+    ".": "./dist/index.js",
+    "./kb": "./dist/kb.js",
+    "./agent": "./dist/agent.js",
+    "./indexing": "./dist/indexing.js"
+  },
+  "files": [
+    "dist"
+  ]
+}
+
