@@ -2,7 +2,7 @@
   "name": "lib-maia-do-client",
   "version": "0.1.0",
   "description": "Clean DigitalOcean GenAI API client for MAIA",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "build": "echo 'No build step yet - TypeScript coming later'",
@@ -21,13 +21,13 @@
   },
   "devDependencies": {},
   "exports": {
-    ".": "./dist/index.js",
-    "./kb": "./dist/kb.js",
-    "./agent": "./dist/agent.js",
-    "./indexing": "./dist/indexing.js"
+    ".": "./src/index.js",
+    "./kb": "./src/kb.js",
+    "./agent": "./src/agent.js",
+    "./indexing": "./src/indexing.js"
   },
   "files": [
-    "dist"
+    "src"
   ]
 }
 
