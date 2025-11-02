@@ -65,7 +65,41 @@ Extract from:
 - **No debug logging**: Production logging only (Winston INFO/WARN/ERROR)
 - **Simple error handling**: Throw errors, let caller handle
 
+## API Reference
+
+```javascript
+import { DigitalOceanClient } from 'lib-maia-do-client';
+
+const doClient = new DigitalOceanClient(process.env.DIGITALOCEAN_TOKEN, {
+  region: 'tor1',
+  baseUrl: 'https://api.digitalocean.com'
+});
+
+// Knowledge Bases
+const kb = await doClient.kb.create({
+  name: 'my-kb',
+  description: 'My knowledge base',
+  model: 'claude-sonnet-4.5'
+});
+
+const kbs = await doClient.kb.list();
+const kbDetails = await doClient.kb.get(kbId);
+
+// Agents
+const agents = await doClient.agent.list();
+const agent = await doClient.agent.get(agentId);
+const newAgent = await doClient.agent.create({
+  name: 'my-agent',
+  instructions: '...',
+  model: 'claude-sonnet-4.5'
+});
+
+// Indexing
+const jobId = await doClient.indexing.start(kbId, dataSourceUuids);
+const status = await doClient.indexing.poll(kbId, jobId);
+```
+
 ## Status
 
-🚧 In Progress - Initial structure only
+✅ **Complete** - Fully implemented and tested
 
